@@ -161,7 +161,7 @@ def key_callback(cmd):
 if __name__ == "__main__":
 
     # Set the parameters for the implementation
-    device = torch.device("cuda", 0 if torch.cuda.is_available() else "cpu")  # cuda or cpu
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # cuda or cpu
 
     path = os.getcwd()
     yaml_path = os.path.join(path, 'config.yaml')
